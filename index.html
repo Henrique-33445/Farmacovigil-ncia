@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GED Farmacovigilância</title>
+</head>
+<body>
+    <h1>GED - Upload de Documentos</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Enviar</button>
+    </form>
+    <h2>Documentos</h2>
+    <ul>
+    {% for d in docs %}
+        <li>{{ d[1] }} - {{ d[2] }} - Criado em: {{ d[3] }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
